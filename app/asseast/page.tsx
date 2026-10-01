@@ -20,3 +20,17 @@ export const navber  = [
         href: "/contact",
     }
 ]
+
+export const SecondImage = [
+    {
+        name: "Profile Image",
+        img: "sumon.jpeg",
+    }
+]
+
+export const ProfileImages = [
+    {
+        name: "Profile Image",
+        img: "sumon.jpg",
+    }
+]
