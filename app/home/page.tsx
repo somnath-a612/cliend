@@ -58,7 +58,7 @@ function page() {
 
 
           <main className="min-h-screen pt-32 px-6 flex flex-col-reverse items-center gap-10 
-            md:flex-row md:justify-between md:items-center  md:px-32   bg-gray-400">
+            md:flex-row md:justify-between md:items-center  md:px-32   bg-gray-600">
 
             {/* LEFT TEXT SECTION */}
             <div className="flex flex-col gap-4 md:gap-10 md:max-w-xl text-center md:text-left">
