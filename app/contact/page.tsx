@@ -69,8 +69,8 @@ export default function ContactPage() {
           <Link href="/services" className="transition-colors hover:text-[#985b3d]">
             Services
           </Link>
-          <Link href="/portfolio" className="transition-colors hover:text-[#985b3d]">
-            Portfolio
+          <Link href="/skills" className="transition-colors hover:text-[#985b3d]">
+            skills
           </Link>
           <Link
             href="/contact"
@@ -101,7 +101,7 @@ export default function ContactPage() {
             CONTACT
           </p>
 
-          <h1 className="max-w-xl font-serif text-5xl leading-[1.05] tracking-tight sm:text-6xl xl:text-7xl">
+          <h1 className="max-w-xl font-serif text-xl leading-[1.05] tracking-tight sm:text-4xl xl:text4xl">
             Let’s Create
             <br />
             Something Beautiful
@@ -153,7 +153,7 @@ export default function ContactPage() {
             </a>
 
             <div className="flex items-center gap-5">
-              <span className="flex h-13 w-13 shrink-0 items-center justify-center rounded-full bg-[#eee0d8] p-4 text-[#75452e]">
+              <span className="flex h-13 w-13 shrink-0 items-center justify-center rounded-full bg-[#eee0d8] p-4 text-[#75452e] transition-colors group-hover:bg-[#75452e] group-hover:text-white">
                 <MapPin size={23} />
               </span>
               <span>
@@ -168,7 +168,7 @@ export default function ContactPage() {
           </div>
 
           {/* Decorative photo area */}
-          <div className="relative mt-12 flex min-h-52 items-end">
+          <div className="relative mt-10 flex min-h-52 items-end">
             <div className="absolute bottom-0 left-[-24px] h-48 w-[70%] rounded-tr-[100px] bg-[#e9dfd3] opacity-60 md:left-[-48px]" />
 
             <div className="relative z-10 flex items-center gap-4 pb-2">
@@ -199,17 +199,17 @@ export default function ContactPage() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.15 }}
-          className="h-fit rounded-2xl border border-[#e4dfd8] bg-white/40 p-6 shadow-sm sm:p-10 lg:p-11"
+          className="h-fit rounded-2xl border border-[#e4dfd8] bg-white/40 p-4 shadow-sm sm:p-10 lg:p-11"
         >
           <p className="text-[11px] tracking-[0.3em] text-[#77716b]">
             GET IN TOUCH
           </p>
 
-          <h2 className="mt-3 font-serif text-4xl tracking-tight sm:text-5xl">
+          <h2 className="mt-3 font-serif text-4xl tracking-tight sm:text-4xl">
             Send me a message
           </h2>
 
-          <p className="mt-4 max-w-md text-sm leading-7 text-[#66615c] sm:text-base">
+          <p className="mt-2 max-w-md text-sm leading-7 text-[#66615c] sm:text-base">
             Have a project in mind? Fill out the form below and I’ll
             get back to you as soon as possible.
           </p>
@@ -284,7 +284,7 @@ export default function ContactPage() {
               <textarea
                 id="message"
                 name="message"
-                rows={5}
+                rows={3}
                 required
                 placeholder="Tell me about your vision, requirements, or anything else..."
                 className="w-full resize-y rounded-lg border border-[#ded9d2] bg-white/50 px-4 py-4 text-sm outline-none transition-all placeholder:text-[#aaa39c] focus:border-[#92583c] focus:ring-2 focus:ring-[#92583c]/10"
