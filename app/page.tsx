@@ -89,9 +89,7 @@ function page() {
               I transform beautiful wedding moments into elegant visual experiences through creativity, storytelling, and thoughtful design..
             </p>
 
-            <button className="bg-yellow-500 text-black px-6 py-3 rounded-md w-fit mx-auto md:mx-0 font-semibold">
-              DOWNLOAD CV →
-            </button>
+            
             {/* <div className="flex gap-4 items-center px-6 py-3    pb-4">
                  {
                     Home.map((items, index) => (
