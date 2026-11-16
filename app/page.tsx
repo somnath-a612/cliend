@@ -54,7 +54,7 @@ function page() {
 
 
   return (
-    <div id="Hero" className="min-h-screen w-full bg-gray-400">
+    <div id="Hero" className="min-h-screen w-full bg-[#f8f6f2]">
       <Navber />
       {/* <Fotter /> */}
 
@@ -63,7 +63,7 @@ function page() {
 
 
         <main className="min-h-screen pt-32 px-6 flex flex-col-reverse items-center gap-10 
-            md:flex-row md:justify-between md:items-center  md:px-32   bg-gray-600">
+            md:flex-row md:justify-between md:items-center  md:px-32   bg-[#f8f6f2]">
 
           {/* LEFT TEXT SECTION */}
           <div className="flex flex-col gap-4 md:gap-10 md:max-w-xl text-center md:text-left">
@@ -75,10 +75,10 @@ function page() {
               transition={{ duration: 0.6 }}
             >
               I’m <span className="text-gray-900">Sumon Dandapat</span> <br />
-              <span className="text-blue-600">
+              <span className="text-[#ae1e3b] ">
                 {words[index].substring(0, subIndex)}
               </span>
-              <span className={`text-blue-600 ${blink ? "opacity-100" : "opacity-0"}`}>
+              <span className={`text-[#ae1e3b]  ${blink ? "opacity-100" : "opacity-0"}`}>
                 |
               </span>
               &nbsp;Desiger
@@ -119,6 +119,7 @@ function page() {
           }
 
         </main>
+        <hr className="border border-gray-600 max-w-full"/>
 
         <section id="about"><About /></section>
           <hr className="border border-gray-600 max-w-full"/>

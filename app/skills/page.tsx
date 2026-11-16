@@ -20,7 +20,6 @@ const skills: Record<Category, Skill[]> = {
   Software: [
     { name: "Adobe Photoshop", level: "EXPERT", percentage: 92 },
     { name: "Canva", level: "ADVANCED", percentage: 86 },
-    { name: "Adobe InDesign", level: "ADVANCED", percentage: 80 },
     { name: "Lightroom", level: "PROFICIENT", percentage: 78 },
     { name: "premium pro", level: "PROFICIENT", percentage: 74 },
     { name: "Adobe Illustrator", level: "WORKING", percentage: 60 },

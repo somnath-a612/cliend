@@ -90,13 +90,13 @@ export default function ContactPage() {
                   EMAIL ME
                 </span>
                 <span className="mt-1 block break-all text-sm sm:text-base">
-                  somnathsingh2003@gmail.com
+                  sumondandapat62@gmail.com
                 </span>
               </span>
             </a>
 
             <a
-              href="https://www.instagram.com/somnath_works/"
+              href="https://www.instagram.com/flame_sumon_007?dlrf=MW53MXR6bXFvcDg3YQ=="
               target="_blank"
               rel="noreferrer"
               className="group flex items-center gap-5"
@@ -109,7 +109,7 @@ export default function ContactPage() {
                   FOLLOW ON INSTAGRAM
                 </span>
                 <span className="mt-1 block text-sm sm:text-base">
-                  @somnath_works
+                  @flame_sumon_007
                 </span>
               </span>
             </a>
@@ -123,7 +123,7 @@ export default function ContactPage() {
                   LOCATION
                 </span>
                 <span className="mt-1 block text-sm sm:text-base">
-                  Haldia, West Bengal, India
+                  Keshiary, West Bengal, India
                 </span>
               </span>
             </div>
@@ -217,28 +217,8 @@ export default function ContactPage() {
               </div>
             </div>
 
-            <div>
-              <label htmlFor="project" className="mb-2 block text-sm">
-                Project Type <span className="text-[#92583c]">*</span>
-              </label>
-              <select
-                id="project"
-                name="project"
-                required
-                defaultValue=""
-                className="w-full rounded-lg border border-[#ded9d2] bg-white/50 px-4 py-4 text-sm text-[#66615c] outline-none transition-all focus:border-[#92583c] focus:ring-2 focus:ring-[#92583c]/10"
-              >
-                <option value="" disabled>
-                  Select a project type
-                </option>
-                <option value="Wedding Album">Wedding Album</option>
-                <option value="Photography">Photography</option>
-                <option value="Album Design">Album Design</option>
-                <option value="Portrait Session">Portrait Session</option>
-                <option value="Other Project">Other Project</option>
-              </select>
-            </div>
-
+            
+             
             <div>
               <label htmlFor="message" className="mb-2 block text-sm">
                 Your Message <span className="text-[#92583c]">*</span>

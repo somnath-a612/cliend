@@ -4,22 +4,17 @@ import { ProfileImages, SecondImage } from "../asseast/page";
 
 function page() {
   return (
-     <section id="about" className="pt-10  px-6 md:px-24 bg-gray-800 text-white">
-      <h1 className="text-center pb-10 font-bold text-2xl md:text-3xl font-serif text-blue-500">
+     <section id="about" className="pt-10  px-6 md:px-24 bg-[#f8f6f2] ">
+      <h1 className="text-center pb-10 font-bold text-2xl md:text-3xl font-serif text-[#ae1e3b]">
         About Me
       </h1>
 
       <main className="flex flex-col-reverse md:flex-row justify-between items-center gap-10 pb-24">
 
-        <div className="md:w-1/2 text-center md:text-left">
+        <div className="md:w-1/2 text-center md:text-left ">
           <h6 className="font-serif  text-sm md:text-base leading-relaxed">
-            My journey started with simple HTML pages — and now I build
-            full-scale frontend applications using
-            <span className="font-bold"> React, Tailwind, and API integrations. And I also know Git &amp; GitHub.</span>
-            <br /><br />
-            I love transforming ideas into pixel-perfect UI designs and writing
-            clean, maintainable code. Every project I build teaches me something
-            new and helps me grow as a developer.
+           I'm a creative Wedding Designer specializing in album design, social media creatives, wedding invitations, invitation videos, and visual branding.
+I transform beautiful wedding moments into elegant visual experiences through creativity, storytelling, and thoughtful design.
           </h6>
         </div>
 

@@ -13,14 +13,14 @@ function page() {
 
 
   return (
-    <section id="services" className="flex flex-col items-center justify-center min-h-screen space-y-2 py-2 bg-pink-200">
+    <section id="services" className="flex flex-col items-center justify-center min-h-screen space-y-2 py-2 bg-[#f8f6f2]">
         <div className= "flex gap-2 font-bold text-2xl">
             <h1 className="text-black">Our</h1>
             <h1 className= "text-red-400">Service</h1>
         </div>
         <p className="text-sm text-mauve-400">Photography & Cinematography</p>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4  text-center ">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4  text-center ">
 
        <motion.div
   whileHover={{

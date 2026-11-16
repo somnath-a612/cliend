@@ -19,7 +19,7 @@ function page() {
                 <ul className="hidden md:flex gap-10 ">
                     {
                         navber.map((items, index) => (
-                            <a key={index} href={items.href} className="text-blue-400 transition duration-300 hover:text-blue-600 hover:scale-110">{items.name}</a>
+                            <a key={index} href={items.href} className="text-[#ae1e3b] transition duration-300 hover:text-blue-600 hover:scale-110">{items.name}</a>
                         ))
                     }
                 </ul>
