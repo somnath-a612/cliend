@@ -1,4 +1,4 @@
-import { i } from "framer-motion/client"
+
 import img1 from "../../album/img1.jpeg"
 
 import img3 from "../../album/img3.jpeg"
@@ -18,8 +18,7 @@ import img66 from "../../instaPost/img66.jpeg"
 import img77 from "../../instaPost/img77.jpeg"
 import img88 from "../../instaPost/img88.jpeg"
 
-import vi1 from "../../invistation/vi1.mp4"
-import vi2 from "../../invistation/vi2.mp4"
+
 
 
 
@@ -136,10 +135,18 @@ export const InstaPosts = [
 export const InvitationVideo = [
     {
         name: "Invitation Video",
-        vid: vi1,
+        src : "/invistation/vi1.mp4",
     },
     {
         name: "Invitation Video",
-        vid: vi2,
+        src : "/invistation/vi2.mp4",
+    },
+     {
+        name: "Invitation Video",
+        src : "/invistation/vi3.mp4",
+    },
+     {
+        name: "Invitation Video",
+        src : "/invistation/vi4.mp4",
     },
 ]
