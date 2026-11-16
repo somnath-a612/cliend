@@ -47,46 +47,8 @@ export default function ContactPage() {
   };
 
   return (
-    <main className="min-h-screen overflow-hidden bg-[#f8f6f2] text-[#191714]">
-      {/* Navbar */}
-      <header className="mx-auto flex max-w-[1440px] items-center justify-between px-6 py-6 md:px-12 lg:px-16">
-        <Link href="/" className="group">
-          <span className="block font-serif text-2xl italic tracking-wide md:text-3xl">
-            Somnath Singh
-          </span>
-          <span className="mt-1 block text-center text-[9px] tracking-[0.45em]">
-            ALBUM DESIGNER
-          </span>
-        </Link>
-
-        <nav className="hidden items-center gap-8 text-sm lg:flex xl:gap-12">
-          <Link href="/" className="transition-colors hover:text-[#985b3d]">
-            Home
-          </Link>
-          <Link href="/about" className="transition-colors hover:text-[#985b3d]">
-            About
-          </Link>
-          <Link href="/services" className="transition-colors hover:text-[#985b3d]">
-            Services
-          </Link>
-          <Link href="/skills" className="transition-colors hover:text-[#985b3d]">
-            skills
-          </Link>
-          <Link
-            href="/contact"
-            className="border-b border-[#985b3d] pb-2 text-[#985b3d]"
-          >
-            Contact
-          </Link>
-        </nav>
-
-        <a
-          href="#contact-form"
-          className="flex items-center gap-3 rounded-full border border-[#29251f] px-5 py-3 text-sm transition-all duration-300 hover:bg-[#75452e] hover:text-white"
-        >
-          Get In Touch <ArrowRight size={16} />
-        </a>
-      </header>
+    <main id="contact" className="min-h-screen overflow-hidden bg-[#f8f6f2] text-[#191714]">
+    
 
       {/* Main content */}
       <section className="mx-auto grid max-w-[1440px] gap-12 px-6 pb-20 pt-12 md:px-12 lg:grid-cols-[1fr_1.08fr] lg:gap-16 lg:px-16 lg:pt-16">
@@ -310,15 +272,7 @@ export default function ContactPage() {
         </motion.div>
       </section>
 
-      {/* Footer */}
-      <footer className="mx-auto flex max-w-[1440px] items-center justify-between border-t border-[#e5dfd8] px-6 py-6 md:px-12 lg:px-16">
-        <p className="text-xs text-[#77716b]">
-          © {new Date().getFullYear()} Somnath Singh. All rights reserved.
-        </p>
-        <span className="font-serif text-2xl italic text-[#92583c]">
-          S.
-        </span>
-      </footer>
+    
     </main>
   );
 }

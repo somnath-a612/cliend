@@ -19,27 +19,27 @@ type Skill = {
 const skills: Record<Category, Skill[]> = {
   Software: [
     { name: "Adobe Photoshop", level: "EXPERT", percentage: 92 },
-    { name: "Adobe Lightroom", level: "ADVANCED", percentage: 86 },
+    { name: "Canva", level: "ADVANCED", percentage: 86 },
     { name: "Adobe InDesign", level: "ADVANCED", percentage: 80 },
-    { name: "Fundy Designer", level: "PROFICIENT", percentage: 78 },
-    { name: "SmartAlbums", level: "PROFICIENT", percentage: 74 },
+    { name: "Lightroom", level: "PROFICIENT", percentage: 78 },
+    { name: "premium pro", level: "PROFICIENT", percentage: 74 },
     { name: "Adobe Illustrator", level: "WORKING", percentage: 60 },
   ],
   Craft: [
-    { name: "Visual Composition", level: "EXPERT", percentage: 94 },
-    { name: "Color Theory", level: "ADVANCED", percentage: 88 },
-    { name: "Typography", level: "ADVANCED", percentage: 82 },
-    { name: "Photo Editing", level: "PROFICIENT", percentage: 78 },
-    { name: "Layout Design", level: "PROFICIENT", percentage: 75 },
-    { name: "Creative Direction", level: "WORKING", percentage: 65 },
+    // { name: "Visual Composition", level: "EXPERT", percentage: 94 },
+    // { name: "Color Theory", level: "ADVANCED", percentage: 88 },
+    // { name: "Typography", level: "ADVANCED", percentage: 82 },
+    // { name: "Photo Editing", level: "PROFICIENT", percentage: 78 },
+    // { name: "Layout Design", level: "PROFICIENT", percentage: 75 },
+    // { name: "Creative Direction", level: "WORKING", percentage: 65 },
   ],
   Print: [
-    { name: "Print Design", level: "EXPERT", percentage: 90 },
-    { name: "Color Management", level: "ADVANCED", percentage: 85 },
-    { name: "Editorial Design", level: "ADVANCED", percentage: 80 },
-    { name: "Photo Books", level: "PROFICIENT", percentage: 76 },
-    { name: "Paper Selection", level: "PROFICIENT", percentage: 72 },
-    { name: "Prepress Production", level: "WORKING", percentage: 62 },
+    // { name: "Print Design", level: "EXPERT", percentage: 90 },
+    // { name: "Color Management", level: "ADVANCED", percentage: 85 },
+    // { name: "Editorial Design", level: "ADVANCED", percentage: 80 },
+    // { name: "Photo Books", level: "PROFICIENT", percentage: 76 },
+    // { name: "Paper Selection", level: "PROFICIENT", percentage: 72 },
+    // { name: "Prepress Production", level: "WORKING", percentage: 62 },
   ],
 };
 
@@ -65,8 +65,8 @@ function SkillRow({
   const animationDuration = shouldReduceMotion ? 0 : 1.15;
   const animationDelay = shouldReduceMotion ? 0 : 0.2 + index * 0.08;
 
-  return (
-    <motion.div
+  return ( 
+    <motion.div id="skills"
       ref={ref}
       initial={{
         opacity: 0,

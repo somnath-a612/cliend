@@ -5,19 +5,20 @@ export const navber  = [
     },
     {
         name: "About",
-        href: "/about",
+        href: "#about",
     },
     {
         name: "Skills",
-        href: "/skills",
+        href: "#skills",
     },
     {
-        name: "Projects",
-        href: "/projects",
+        name: "Services",
+        href: "#services",
     },
+   
     {
         name: "Contact",
-        href: "/contact",
+        href: "#contact",
     }
 ]
 

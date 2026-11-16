@@ -1,6 +1,6 @@
 'use cliend';
 
-import { SecondImage } from "../asseast/page";
+import { ProfileImages, SecondImage } from "../asseast/page";
 
 function page() {
   return (
@@ -30,7 +30,7 @@ function page() {
         /> */}
 
         {
-          SecondImage.map((items, index) => (
+          ProfileImages.map((items, index) => (
             <img key = {index} src={items.img} alt={items.name} className="w-52 h-52 md:w-72 md:h-72 rounded-xl object-cover shadow-lg"/>
           ))
         }

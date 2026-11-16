@@ -12,7 +12,7 @@ const images = [
   { src: "spy.JPEG", alt: "Album design" },
 ];
 
-export default function page() {
+export default function project() {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const previousImage = () => {
@@ -39,7 +39,7 @@ export default function page() {
   }, []);
 
   return (
-    <div className="relative mx-auto w-full max-w-5xl overflow-hidden rounded-2xl">
+    <div id="projects" className="relative mx-auto w-full max-w-5xl overflow-hidden rounded-2xl">
       {/* Image */}
       <div className="relative aspect-[16/9] w-full">
         <Image

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import LenisProvider from "../app/lanis/page";
+import Navbar from "../app/navber/page";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -27,10 +28,18 @@ export default function RootLayout({
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
+
         <LenisProvider>
-          {children}
+          <Navbar />
+
+          <main className="flex-1">
+            {children}
+          </main>
+
         </LenisProvider>
+
       </body>
     </html>
   );
 }
+

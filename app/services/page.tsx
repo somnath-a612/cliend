@@ -8,7 +8,7 @@ import {motion} from "framer-motion"
 
 function page() {
   return (
-    <section className="flex flex-col items-center justify-center min-h-screen space-y-2 py-2 bg-pink-200">
+    <section id="services" className="flex flex-col items-center justify-center min-h-screen space-y-2 py-2 bg-pink-200">
         <div className= "flex gap-2 font-bold text-2xl">
             <h1 className="text-black">Our</h1>
             <h1 className= "text-red-400">Service</h1>
