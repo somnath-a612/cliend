@@ -31,6 +31,6 @@ export const SecondImage = [
 export const ProfileImages = [
     {
         name: "Profile Image",
-        img: "sumon.jpg",
+        img: "/images/sunon.jpeg",
     }
 ]

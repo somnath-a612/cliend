@@ -3,13 +3,13 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 // import  LenisProvider  from "./LenisProvider";
-import  Navber  from "../navber/page";
+import Navber from "../navber/page";
 import { ProfileImages } from "@/app/asseast/page";
 
 
 function page() {
 
-    const words = ["Frontend"];
+  const words = ["Album"];
   const [index, setIndex] = useState(0);
   const [subIndex, setSubIndex] = useState(0);
   const [blink, setBlink] = useState(true);
@@ -49,7 +49,7 @@ function page() {
 
 
   return (
-     <div id="Hero" className="min-h-screen w-full bg-gray-400">
+    <div id="Hero" className="min-h-screen w-full bg-gray-400">
       <Navber />
       {/* <Fotter /> */}
 
@@ -57,38 +57,37 @@ function page() {
         {/* <LenisProvider> */}
 
 
-          <main className="min-h-screen pt-32 px-6 flex flex-col-reverse items-center gap-10 
+        <main className="min-h-screen pt-32 px-6 flex flex-col-reverse items-center gap-10 
             md:flex-row md:justify-between md:items-center  md:px-32   bg-gray-600">
 
-            {/* LEFT TEXT SECTION */}
-            <div className="flex flex-col gap-4 md:gap-10 md:max-w-xl text-center md:text-left">
+          {/* LEFT TEXT SECTION */}
+          <div className="flex flex-col gap-4 md:gap-10 md:max-w-xl text-center md:text-left">
 
-              <motion.h1
-                className="text-3xl md:text-5xl font-bold text-gray-900 leading-snug"
-                initial={{ opacity: 0, y: 10 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6 }}
-              >
-                I’m <span className="text-gray-900">Somnath Singh</span> <br />
-                <span className="text-blue-600">
-                  {words[index].substring(0, subIndex)}
-                </span>
-                <span className={`text-blue-600 ${blink ? "opacity-100" : "opacity-0"}`}>
-                  |
-                </span>
-                &nbsp;Developer
-              </motion.h1>
+            <motion.h1
+              className="text-3xl md:text-5xl font-bold text-gray-900 leading-snug"
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+            >
+              I’m <span className="text-gray-900">Sumon Dandapat</span> <br />
+              <span className="text-blue-600">
+                {words[index].substring(0, subIndex)}
+              </span>
+              <span className={`text-blue-600 ${blink ? "opacity-100" : "opacity-0"}`}>
+                |
+              </span>
+              &nbsp;Desiger
+            </motion.h1>
 
-              <p className="font-serif text-gray-700 text-sm md:text-base leading-relaxed">
-                Hi, I’m Somnath Singh — a Computer Science student and a passionate Frontend
-                Developer who loves turning ideas into clean, modern, and user-friendly web
-                interfaces.
-              </p>
+            <p className="font-serif text-gray-700 text-sm md:text-base leading-relaxed">
+              Hi, I’m Sumon Dandapat — I'm a creative Wedding Designer specializing in album design, social media creatives, wedding invitations, invitation videos, and visual branding.
+              I transform beautiful wedding moments into elegant visual experiences through creativity, storytelling, and thoughtful design..
+            </p>
 
-              <button className="bg-yellow-500 text-black px-6 py-3 rounded-md w-fit mx-auto md:mx-0 font-semibold">
-                DOWNLOAD CV →
-              </button>
-              {/* <div className="flex gap-4 items-center px-6 py-3    pb-4">
+            <button className="bg-yellow-500 text-black px-6 py-3 rounded-md w-fit mx-auto md:mx-0 font-semibold">
+              DOWNLOAD CV →
+            </button>
+            {/* <div className="flex gap-4 items-center px-6 py-3    pb-4">
                  {
                     Home.map((items, index) => (
                     <a href={items.url}>
@@ -98,26 +97,26 @@ function page() {
                      ))  
                       }
               </div> */}
-            </div>
+          </div>
 
 
-            {/* RIGHT IMAGE SECTION — SAME AS YOUR CODE */}
-            {
-              ProfileImages.map((items, index) => (
-                <img key={index}
-                  src={items.img}
-                  alt={items.name}
-                  className="w-52 h-50
+          {/* RIGHT IMAGE SECTION — SAME AS YOUR CODE */}
+          {
+            ProfileImages.map((items, index) => (
+              <img key={index}
+                src={items.img}
+                alt={items.name}
+                className="w-52 h-50
                    md:w-[380px] md:h-[380px]
                    object-cover rounded-full border
                    "
 
-                />
-              ))
-            }
+              />
+            ))
+          }
 
-          </main>
-          
+        </main>
+
 
 
 
