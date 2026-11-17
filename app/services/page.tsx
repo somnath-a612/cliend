@@ -1,285 +1,207 @@
+
 "use client";
 
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { ArrowRight, Camera, StarIcon, User, FilmIcon } from "lucide-react"
-import {motion} from "framer-motion"
-import { useRouter } from "next/navigation"
+import {
+  Card,
+} from "@/components/ui/card";
 
+import {
+  ArrowRight,
+  Camera,
+  StarIcon,
+  FilmIcon,
+} from "lucide-react";
 
+import { motion } from "framer-motion";
+import Link from "next/link";
 
-function page() {
+const services = [
+  {
+    title: "Album Design",
+    icon: Camera,
+    href: "/albumDesign",
+  },
+  {
+    title: "Instagram Posts",
+    icon: StarIcon,
+    href: "/instagramPosts",
+  },
+  {
+    title: "Invitation Video",
+    icon: FilmIcon,
+    href: "/invitationVideo",
+  },
+];
 
-  const router = useRouter();
+// Parent animation
+const containerVariants = {
+  hidden: {},
+  visible: {
+    transition: {
+      staggerChildren: 0.2,
+    },
+  },
+};
 
+// Card animation
+const cardVariants = {
+  hidden: {
+    opacity: 0,
+    y: 70,
+    scale: 0.9,
+  },
+  visible: {
+    opacity: 1,
+    y: 0,
+    scale: 1,
+    transition: {
+      duration: 0.8,
+      ease: [0.22, 1, 0.36, 1] as const,
+    },
+  },
+};
 
+export default function Page() {
   return (
-    <section id="services" className="flex flex-col items-center justify-center min-h-screen space-y-2 py-2 bg-[#f8f6f2]">
-        <div className= "flex gap-2 font-bold text-2xl">
-            <h1 className="text-black">Our</h1>
-            <h1 className= "text-red-400">Service</h1>
-        </div>
-        <p className="text-sm text-mauve-400">Photography & Cinematography</p>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4  text-center ">
-
-       <motion.div
-  whileHover={{
-    scale: 1.03,
-    y: -3,
-  }}
-  whileTap={{
-    scale: 0.98,
-  }}
-  transition={{
-    duration: 0.2,
-    ease: "easeOut",
-  }}
->
-  <Card onClick={() => router.push('/albumDesign')}
-    className="
-      group
-      w-80 h-40
-      rounded-2xl
-      border border-pink-100
-      bg-white
-      shadow-md
-      hover:shadow-xl
-      transition-all duration-300
-      flex flex-col items-center justify-center
-    "
-  >
-    {/* Camera Icon */}
-    <div
-      className="
-        flex h-8 w-8 items-center justify-center
-        rounded-sm
-        bg-red-50
-        
-        group-hover:bg-red-500
-      "
+    <section
+      id="services"
+      className="flex min-h-screen flex-col items-center justify-center space-y-3 bg-[#f8f6f2] px-4 py-16"
     >
-      <Camera
-        className="
-          h-4 w-4
-          text-red-500
-          
-          group-hover:text-white
-          group-hover:scale-110
-        "
-      />
-    </div>
 
-    {/* Title */}
-    <h2
-      className="
-        
-        text-sm font-bold text-black text-center
-      
-      "
-    >
-      Album Design
-    </h2>
-
-    {/* Discover */}
-    <button
-      className="
-        flex items-center gap-2
-        text-xs font-medium
-        tracking-[0.25em]
-        text-gray-300
-       
-        group-hover:text-red-500
-      "
-    >
-      Discover
-
-      <ArrowRight
-        className="
-          h-3 w-3
-          
-          group-hover:translate-x-1
-        "
-      />
-    </button>
-  </Card>
-</motion.div>
-
-        <motion.div
-  whileHover={{
-    scale: 1.03,
-    y: -3,
-  }}
-  whileTap={{
-    scale: 0.98,
-  }}
-  transition={{
-    duration: 0.2,
-    ease: "easeOut",
-  }}
->
-  <Card onClick={() => router.push('/instagramPosts')}
-    className="
-      group
-      w-80 h-40
-      rounded-2xl
-      border border-pink-100
-      bg-white
-      shadow-md
-      hover:shadow-xl
-      transition-all duration-300
-      flex flex-col items-center justify-center
-    "
-  >
-    {/* Camera Icon */}
-    <div
-      className="
-        flex h-8 w-8 items-center justify-center
-        rounded-sm
-        bg-red-50
-        
-        group-hover:bg-red-500
-      "
-    >
-      <StarIcon
-        className="
-          h-4 w-4
-          text-red-500
-          
-          group-hover:text-white
-          group-hover:scale-110
-        "
-      />
-    </div>
-
-    {/* Title */}
-    <h2
-      className="
-        
-        text-sm font-bold text-black text-center
-      
-      "
-    >
-      Instagram Posts
-    </h2>
-
-    {/* Discover */}
-    <button type="button" onClick={() => router.push('/weadingPhoto')}
-      className="
-        flex items-center gap-2
-        text-xs font-medium
-        tracking-[0.25em]
-        text-gray-300 
-       
-        group-hover:text-red-500
-      "
-    >
-      Discover
-
-      <ArrowRight
-        className="
-          h-3 w-3
-          
-          group-hover:translate-x-1
-        "
-      />
-    </button>
-  </Card>
-</motion.div>
-
-
+      {/* Heading Animation */}
       <motion.div
-  whileHover={{
-    scale: 1.03,
-    y: -3,
-  }}
-  whileTap={{
-    scale: 0.98,
-  }}
-  transition={{
-    duration: 0.2,
-    ease: "easeOut",
-  }}
->
-  <Card onClick={() => router.push('/invitationVideo')}
-    className="
-      group
-      w-80 h-40
-      rounded-2xl
-      border border-pink-100
-      bg-white
-      shadow-md
-      hover:shadow-xl
-      transition-all duration-300
-      flex flex-col items-center justify-center
-    "
-  >
-    {/* Camera Icon */}
-    <div
-      className="
-        flex h-8 w-8 items-center justify-center
-        rounded-sm
-        bg-red-50
-        
-        group-hover:bg-red-500
-      "
-    >
-      <FilmIcon
-        className="
-          h-4 w-4
-          text-red-500
-          
-          group-hover:text-white
-          group-hover:scale-110
-        "
-      />
-    </div>
+        initial={{ opacity: 0, y: 35 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: false, amount: 0.5 }}
+        transition={{ duration: 0.7, ease: "easeOut" }}
+        className="flex gap-2 text-2xl font-bold"
+      >
+        <h1 className="text-black">Our</h1>
+        <h1 className="text-red-400">Service</h1>
+      </motion.div>
 
-    {/* Title */}
-    <h2
-      className="
-        
-        text-sm font-bold text-black text-center
-      
-      "
-    >
-      Invitation Video
-    </h2>
+      {/* Description */}
+      <motion.p
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: false }}
+        transition={{ duration: 0.7, delay: 0.2 }}
+        className="text-sm text-mauve-400"
+      >
+        Photography & Cinematography
+      </motion.p>
 
-    {/* Discover */}
-    <button
-      className="
-        flex items-center gap-2
-        text-xs font-medium
-        tracking-[0.25em]
-        text-gray-300
-       
-        group-hover:text-red-500
-      "
-    >
-      Discover
+      {/* Services Cards */}
+      <motion.div
+        variants={containerVariants}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{
+          once: false,
+          amount: 0.2,
+        }}
+        className="grid grid-cols-1 gap-4 text-center md:grid-cols-2 lg:grid-cols-3"
+      >
 
-      <ArrowRight
-        className="
-          h-3 w-3
-          
-          group-hover:translate-x-1
-        "
-      />
-    </button>
-  </Card>
-</motion.div>
+        {services.map((service, index) => {
+          const Icon = service.icon;
 
+          return (
+            <motion.div
+              key={service.title}
+              variants={cardVariants}
+              whileHover={{
+                scale: 1.05,
+                y: -8,
+              }}
+              whileTap={{
+                scale: 0.97,
+              }}
+              transition={{
+                duration: 0.3,
+                ease: "easeOut",
+              }}
+            >
+              <Link href={service.href}>
+                <Card
+                  className="
+                    group
+                    flex h-40 w-80
+                    cursor-pointer
+                    flex-col items-center justify-center
+                    rounded-2xl
+                    border border-pink-100
+                    bg-white
+                    shadow-md
+                    transition-shadow duration-300
+                    hover:shadow-xl
+                  "
+                >
 
-    
+                  {/* Icon */}
+                  <div
+                    className="
+                      flex h-10 w-10
+                      items-center justify-center
+                      rounded-lg
+                      bg-red-50
+                      transition-all duration-300
+                      group-hover:rotate-6
+                      group-hover:bg-red-500
+                    "
+                  >
+                    <Icon
+                      className="
+                        h-5 w-5
+                        text-red-500
+                        transition-all duration-300
+                        group-hover:scale-110
+                        group-hover:text-white
+                      "
+                    />
+                  </div>
 
-                   
-                    
-            
+                  {/* Title */}
+                  <h2
+                    className="
+                      text-sm font-bold
+                      text-black
+                      transition-colors duration-300
+                      group-hover:text-red-500
+                    "
+                  >
+                    {service.title}
+                  </h2>
 
-        </div>
+                  {/* Discover */}
+                  <span
+                    className="
+                      flex items-center gap-2
+                      text-xs font-medium
+                      tracking-[0.25em]
+                      text-gray-300
+                      transition-colors duration-300
+                      group-hover:text-red-500
+                    "
+                  >
+                    Discover
 
+                    <ArrowRight
+                      className="
+                        h-3 w-3
+                        transition-transform duration-300
+                        group-hover:translate-x-2
+                      "
+                    />
+                  </span>
+
+                </Card>
+              </Link>
+            </motion.div>
+          );
+        })}
+
+      </motion.div>
     </section>
-  )
+  );
 }
-
-export default page

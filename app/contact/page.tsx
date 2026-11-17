@@ -10,6 +10,7 @@ import {
   ShieldCheck,
   CheckCircle2,
   Camera,
+  Phone,
 } from "lucide-react";
 import { motion } from "framer-motion";
 
@@ -48,7 +49,7 @@ export default function ContactPage() {
 
   return (
     <main id="contact" className="min-h-screen overflow-hidden bg-[#f8f6f2] text-[#191714]">
-    
+
 
       {/* Main content */}
       <section className="mx-auto grid max-w-[1440px] gap-12 px-6 pb-20 pt-12 md:px-12 lg:grid-cols-[1fr_1.08fr] lg:gap-16 lg:px-16 lg:pt-16">
@@ -114,7 +115,32 @@ export default function ContactPage() {
               </span>
             </a>
 
-            <div className="flex items-center gap-5">
+
+
+            <div className="group flex items-center gap-5 cursor-pointer">
+              <span className="flex h-13 w-13 shrink-0 items-center justify-center rounded-full bg-[#eee0d8] p-4 text-[#75452e] transition-colors duration-300 group-hover:bg-[#75452e] group-hover:text-white">
+                <Phone size={23} />
+              </span>
+
+              <span>
+                <span className="block text-[10px] tracking-[0.25em] text-[#77716b]">
+                  WHATSAPP
+                </span>
+
+                <a
+                  href="https://wa.me/919749805992"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-1 block text-sm sm:text-base transition-colors duration-300 hover:text-[#75452e]"
+                >
+                  91+ 9749805992
+                </a>
+              </span>
+            </div>
+
+
+
+            <div className="group flex items-center gap-5 cursor-pointer">
               <span className="flex h-13 w-13 shrink-0 items-center justify-center rounded-full bg-[#eee0d8] p-4 text-[#75452e] transition-colors group-hover:bg-[#75452e] group-hover:text-white">
                 <MapPin size={23} />
               </span>
@@ -217,8 +243,8 @@ export default function ContactPage() {
               </div>
             </div>
 
-            
-             
+
+
             <div>
               <label htmlFor="message" className="mb-2 block text-sm">
                 Your Message <span className="text-[#92583c]">*</span>
@@ -252,7 +278,7 @@ export default function ContactPage() {
         </motion.div>
       </section>
 
-    
+
     </main>
   );
 }
