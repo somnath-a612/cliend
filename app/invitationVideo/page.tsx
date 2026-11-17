@@ -1,6 +1,6 @@
 'use client'
 
-import {InvitationVideo} from "@/app/asseast/page";
+import {InvitationVideo} from "@/app/asseast/data";
 
 function page() {
   return (

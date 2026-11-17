@@ -2,7 +2,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { InstaPosts } from "@/app/asseast/page";
+import { InstaPosts } from "@/app/asseast/data";
 
 export default function InstagramPosts() {
   return (

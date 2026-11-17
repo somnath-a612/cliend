@@ -2,7 +2,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { WeadingPhoto } from "@/app/asseast/page";
+import { WeadingPhoto } from "@/app/asseast/data";
 
 export default function InstagramPosts() {
   return (

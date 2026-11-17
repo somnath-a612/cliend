@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 // import  LenisProvider  from "./LenisProvider";
 import Navber from "../navber/page";
-import { ProfileImages } from "@/app/asseast/page";
+import { ProfileImages } from "@/app/asseast/data";
 
 
 function page() {

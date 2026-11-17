@@ -1,8 +1,12 @@
-'use cliend';
+'use client';
 
-import { ProfileImages, SecondImage } from "../asseast/page";
+import { ProfileImages } from "../asseast/data";
 
 function page() {
+
+  console.log(Array.isArray(ProfileImages));
+
+
   return (
      <section id="about" className="pt-10  px-6 md:px-24 bg-[#f8f6f2] ">
       <h1 className="text-center pb-10 font-bold text-2xl md:text-3xl font-serif text-[#ae1e3b]">
@@ -18,23 +22,25 @@ I transform beautiful wedding moments into elegant visual experiences through cr
           </h6>
         </div>
 
-        {/* <img
-          src="https://placehold.co/400x400"
-          alt=""
-          className="w-48 h-48 md:w-72 md:h-72 rounded-xl object-cover shadow-lg"
-        /> */}
-
+       
         {
           ProfileImages.map((items, index) => (
             <img key = {index} src={items.img} alt={items.name} className="w-52 h-52 md:w-72 md:h-72 rounded-xl object-cover shadow-lg"/>
           ))
         }
         
+        
 
       </main>
       
+      
+      
     </section>
+    
+    
   )
+  
+  
 }
 
 export default page
