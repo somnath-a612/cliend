@@ -10,6 +10,7 @@ import Skills from "./skills/page";
 // import Project from "./project/page";
 import Contact from "./contact/page";
 import Services from "./services/page";
+import Footer from "./footer/page";
 
 
 function page() {
@@ -128,7 +129,7 @@ function page() {
         <section id="services"><Services /></section>
           <hr className="border border-gray-600 max-w-full"/>
         <section id="contact"><Contact /></section>
-          <hr className="border border-gray-600 max-w-full"/>
+          
 
 
 
@@ -136,6 +137,7 @@ function page() {
 
       
       </div>
+      <Footer />
     </div>
 
   )

@@ -1,12 +1,14 @@
 
 "use client";
 
-import { useRef, useState } from "react";
+import { useState } from "react";
 import {
   motion,
   useInView,
   useReducedMotion,
+  AnimatePresence,
 } from "framer-motion";
+import { useRef } from "react";
 
 type Category = "Software" | "Craft" | "Print";
 
@@ -21,69 +23,51 @@ const skills: Record<Category, Skill[]> = {
     { name: "Adobe Photoshop", level: "EXPERT", percentage: 92 },
     { name: "Canva", level: "ADVANCED", percentage: 86 },
     { name: "Lightroom", level: "PROFICIENT", percentage: 78 },
-    { name: "premium pro", level: "PROFICIENT", percentage: 74 },
+    { name: "Premiere Pro", level: "PROFICIENT", percentage: 74 },
     { name: "Adobe Illustrator", level: "WORKING", percentage: 60 },
   ],
-  Craft: [
-    // { name: "Visual Composition", level: "EXPERT", percentage: 94 },
-    // { name: "Color Theory", level: "ADVANCED", percentage: 88 },
-    // { name: "Typography", level: "ADVANCED", percentage: 82 },
-    // { name: "Photo Editing", level: "PROFICIENT", percentage: 78 },
-    // { name: "Layout Design", level: "PROFICIENT", percentage: 75 },
-    // { name: "Creative Direction", level: "WORKING", percentage: 65 },
-  ],
-  Print: [
-    // { name: "Print Design", level: "EXPERT", percentage: 90 },
-    // { name: "Color Management", level: "ADVANCED", percentage: 85 },
-    // { name: "Editorial Design", level: "ADVANCED", percentage: 80 },
-    // { name: "Photo Books", level: "PROFICIENT", percentage: 76 },
-    // { name: "Paper Selection", level: "PROFICIENT", percentage: 72 },
-    // { name: "Prepress Production", level: "WORKING", percentage: 62 },
-  ],
+  Craft: [],
+  Print: [],
 };
 
 const categories: Category[] = ["Software", "Craft", "Print"];
 
-// Individual skill row with animated progress bar
+const ease = [0.22, 1, 0.36, 1] as const;
+
 function SkillRow({
   skill,
   index,
+  active,
+  reduceMotion,
 }: {
   skill: Skill;
   index: number;
+  active: boolean;
+  reduceMotion: boolean | null;
 }) {
-  const ref = useRef<HTMLDivElement>(null);
-
-  const isInView = useInView(ref, {
-    once: true,
-    amount: 0.35,
-  });
-
-  const shouldReduceMotion = useReducedMotion();
-
-  const animationDuration = shouldReduceMotion ? 0 : 1.15;
-  const animationDelay = shouldReduceMotion ? 0 : 0.2 + index * 0.08;
-
-  return ( 
-    <motion.div id="skills"
-      ref={ref}
+  return (
+    <motion.div
       initial={{
         opacity: 0,
-        y: shouldReduceMotion ? 0 : 18,
+        y: reduceMotion ? 0 : 35,
+        filter: reduceMotion ? "none" : "blur(8px)",
       }}
-      animate={
-        isInView
-          ? { opacity: 1, y: 0 }
-          : { opacity: 0, y: shouldReduceMotion ? 0 : 18 }
-      }
+      animate={{
+        opacity: 1,
+        y: 0,
+        filter: "blur(0px)",
+      }}
+      exit={{
+        opacity: 0,
+        y: reduceMotion ? 0 : -15,
+      }}
       transition={{
-        duration: shouldReduceMotion ? 0 : 0.55,
-        delay: shouldReduceMotion ? 0 : index * 0.08,
-        ease: "easeOut",
+        duration: reduceMotion ? 0 : 0.7,
+        delay: reduceMotion ? 0 : index * 0.12,
+        ease,
       }}
       className="border-b border-zinc-300 pb-6 pt-7"
     >
-      {/* Skill name and percentage */}
       <div className="mb-4 flex items-center justify-between gap-3">
         <h3 className="text-base font-medium tracking-tight text-zinc-950 sm:text-xl">
           {skill.name}
@@ -96,7 +80,6 @@ function SkillRow({
         </div>
       </div>
 
-      {/* Progress bar */}
       <div
         role="progressbar"
         aria-label={skill.name}
@@ -105,31 +88,29 @@ function SkillRow({
         aria-valuemax={100}
         className="relative h-[5px] w-full rounded-full bg-zinc-300/80"
       >
-        {/* Animated fill */}
         <motion.div
           initial={{ width: "0%" }}
           animate={{
-            width: isInView ? `${skill.percentage}%` : "0%",
+            width: active ? `${skill.percentage}%` : "0%",
           }}
           transition={{
-            duration: animationDuration,
-            delay: animationDelay,
-            ease: [0.22, 1, 0.36, 1],
+            duration: reduceMotion ? 0 : 1.3,
+            delay: reduceMotion ? 0 : 0.25 + index * 0.12,
+            ease,
           }}
           className="absolute left-0 top-0 h-full rounded-full bg-[#ae1e3b]"
         />
 
-        {/* Animated circular endpoint */}
         <motion.span
           initial={{ left: "0%", opacity: 0 }}
           animate={{
-            left: isInView ? `${skill.percentage}%` : "0%",
-            opacity: isInView ? 1 : 0,
+            left: active ? `${skill.percentage}%` : "0%",
+            opacity: active ? 1 : 0,
           }}
           transition={{
-            duration: animationDuration,
-            delay: animationDelay,
-            ease: [0.22, 1, 0.36, 1],
+            duration: reduceMotion ? 0 : 1.3,
+            delay: reduceMotion ? 0 : 0.25 + index * 0.12,
+            ease,
           }}
           className="absolute top-1/2 z-10 size-[13px] -translate-x-1/2 -translate-y-1/2 rounded-full border-2 border-[#ae1e3b] bg-[#ae1e3b] shadow-[0_0_0_3px_#eeedef]"
         />
@@ -138,35 +119,51 @@ function SkillRow({
   );
 }
 
-// Main skills section
 export default function ToolsCraft() {
   const [activeCategory, setActiveCategory] =
     useState<Category>("Software");
 
+  const sectionRef = useRef<HTMLElement>(null);
+
+  const isInView = useInView(sectionRef, {
+    once: false,
+    amount: 0.15,
+  });
+
   const shouldReduceMotion = useReducedMotion();
+
+  const reduceMotion = Boolean(shouldReduceMotion);
 
   return (
     <section
+      ref={sectionRef}
       id="skills"
-      className="min-h-screen overflow-hidden bg-[#eeedef] px-5 py-16 text-zinc-950 sm:px-10 sm:py-20 lg:px-16 lg:py-24"
+      className="relative min-h-screen overflow-hidden bg-[#eeedef] px-5 py-16 text-zinc-950 sm:px-10 sm:py-20 lg:px-16 lg:py-24"
     >
       <div className="mx-auto max-w-[1500px]">
-        {/* Heading and category tabs */}
+
+        {/* Heading animation */}
         <motion.div
           initial={{
             opacity: 0,
-            y: shouldReduceMotion ? 0 : 25,
+            y: reduceMotion ? 0 : 65,
           }}
-          animate={{ opacity: 1, y: 0 }}
+          animate={
+            isInView
+              ? { opacity: 1, y: 0 }
+              : { opacity: 0, y: reduceMotion ? 0 : 65 }
+          }
           transition={{
-            duration: shouldReduceMotion ? 0 : 0.8,
-            ease: "easeOut",
+            duration: reduceMotion ? 0 : 0.9,
+            ease,
           }}
           className="mb-10 flex flex-col justify-between gap-8 md:mb-14 md:flex-row md:items-center"
         >
           <h2 className="font-serif text-4xl leading-tight tracking-tight sm:text-5xl lg:text-6xl">
             Tools and{" "}
-            <span className="italic text-[#ae1e3b]">craft</span>
+            <span className="italic text-[#ae1e3b]">
+              craft
+            </span>
           </h2>
 
           {/* Category buttons */}
@@ -210,32 +207,48 @@ export default function ToolsCraft() {
           </div>
         </motion.div>
 
-        {/* Animated skills grid */}
-        <motion.div
-          key={activeCategory}
-          role="tabpanel"
-          initial={{
-            opacity: 0,
-            y: shouldReduceMotion ? 0 : 12,
-          }}
-          animate={{
-            opacity: 1,
-            y: 0,
-          }}
-          transition={{
-            duration: shouldReduceMotion ? 0 : 0.4,
-            ease: "easeOut",
-          }}
-          className="grid grid-cols-1 gap-x-12 md:grid-cols-2 lg:gap-x-16"
-        >
-          {skills[activeCategory].map((skill, index) => (
-            <SkillRow
-              key={`${activeCategory}-${skill.name}`}
-              skill={skill}
-              index={index}
-            />
-          ))}
-        </motion.div>
+        {/* Skills animation */}
+        <AnimatePresence mode="wait">
+          {isInView && (
+            <motion.div
+              key={activeCategory}
+              role="tabpanel"
+              initial={{
+                opacity: 0,
+                y: reduceMotion ? 0 : 35,
+              }}
+              animate={{
+                opacity: 1,
+                y: 0,
+              }}
+              exit={{
+                opacity: 0,
+                y: reduceMotion ? 0 : -20,
+              }}
+              transition={{
+                duration: reduceMotion ? 0 : 0.55,
+                ease,
+              }}
+              className="grid grid-cols-1 gap-x-12 md:grid-cols-2 lg:gap-x-16"
+            >
+              {skills[activeCategory].map((skill, index) => (
+                <SkillRow
+                  key={`${activeCategory}-${skill.name}`}
+                  skill={skill}
+                  index={index}
+                  active={isInView}
+                  reduceMotion={reduceMotion}
+                />
+              ))}
+
+              {skills[activeCategory].length === 0 && (
+                <p className="py-8 text-sm tracking-wide text-zinc-500">
+                  More skills coming soon.
+                </p>
+              )}
+            </motion.div>
+          )}
+        </AnimatePresence>
       </div>
     </section>
   );

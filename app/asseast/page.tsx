@@ -74,10 +74,10 @@ export const WeadingPhoto = [
     name : "album Design",
     img : img4,
    },
-   {
-    name : "album Design",
-    img : img5,
-   },
+//    {
+//     name : "album Design",
+//     img : img5,
+//    },
 //    {
 //     name : "album Design",
 //     img : img6,
