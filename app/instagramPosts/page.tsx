@@ -62,7 +62,7 @@ export default function InstagramPosts() {
             <div className="relative aspect-[4/5] overflow-hidden rounded-xl bg-zinc-100">
 
               <img
-                src={items.img.src}
+                src={items.img}
                 alt={items.name}
                 loading="lazy"
                 className="

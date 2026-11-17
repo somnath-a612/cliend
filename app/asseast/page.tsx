@@ -1,22 +1,5 @@
 
-import img1 from "../../album/img1.jpeg"
 
-import img3 from "../../album/img3.jpeg"
-import img4 from "../../album/img4.jpeg"
-import img5 from "../../album/img5.jpeg"
-import img6 from "../../album/img6.jpeg"
-import img7 from "../../album/img7.jpeg"
-import img8 from "../../album/img8.jpeg"
-import img9 from "../../album/img9.jpeg"
-
-import img11 from "../../instaPost/img11.jpeg"
-import img22 from "../../instaPost/img22.jpeg"
-import img33 from "../../instaPost/img33.jpeg"
-import img44 from "../../instaPost/img44.jpeg"
-import img55 from "../../instaPost/img55.jpeg"
-import img66 from "../../instaPost/img66.jpeg"
-import img77 from "../../instaPost/img77.jpeg"
-import img88 from "../../instaPost/img88.jpeg"
 
 
 
@@ -63,16 +46,16 @@ export const ProfileImages = [
 export const WeadingPhoto = [
    {
     name : "album Design",
-    img : img1,
+    img : "/album/img1.jpeg",
    },
   
    {
     name : "album Design",
-    img : img3,
+    img : "/album/img3.jpeg",
    },
    {
     name : "album Design",
-    img : img4,
+    img : "/album/img4.jpeg",
    },
 //    {
 //     name : "album Design",
@@ -99,35 +82,35 @@ export const WeadingPhoto = [
 export const InstaPosts = [
     {
         name: "Instagram Post",
-        img: img11,
+        img: "/instaPost/img11.jpeg",
     },
     {
         name: "Instagram Post",
-        img: img22,
+        img: "/instaPost/img22.jpeg",
     },
     {
         name: "Instagram Post",
-        img: img33,
+        img: "/instaPost/img33.jpeg",
     },
     {
         name: "Instagram Post",
-        img: img44,
+        img: "/instaPost/img44.jpeg",
     },
     {
         name: "Instagram Post",
-        img: img55,
+        img: "/instaPost/img55.jpeg",
     },
     {
         name: "Instagram Post",
-        img: img66,
+        img: "/instaPost/img66.jpeg",
     },
     {
         name: "Instagram Post",
-        img: img77,
+        img: "/instaPost/img77.jpeg",
     },
     {
         name: "Instagram Post",
-        img: img88,
+        img: "/instaPost/img88.jpeg",
     }
 
 ]
