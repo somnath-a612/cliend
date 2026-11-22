@@ -14,7 +14,7 @@ function page() {
        
         <nav className=" font-serif px-12 md:px-24 py-2 items-center  shadow fixed z-9 w-full mx-auto backdrop-blur-md transition-all duration-300">
             <div className="flex justify-between items-center ">
-                <img src="/images/ss.png" alt="" className="rounded-full h-5 w-5" />
+                <img src="/images/LOGO.png" alt="" className="rounded-full size-10" />
 
                 <ul className="hidden md:flex gap-10 ">
                     {

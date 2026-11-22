@@ -78,6 +78,34 @@ export const WeadingPhoto = [
 export const InstaPosts = [
     {
         name: "Instagram Post",
+        img: "/instaPost/Day 1.jpeg",
+    },
+    {
+        name: "Instagram Post",
+        img: "/instaPost/Day 2.jpeg",
+    },
+    {
+        name: "Instagram Post",
+        img: "/instaPost/Day 3.jpeg",
+    },
+    {
+        name: "Instagram Post",
+        img: "/instaPost/Day 4.jpeg",
+    },
+     {
+        name: "Instagram Post",
+        img: "/instaPost/Day 5.jpeg",
+    },
+     {
+        name: "Instagram Post",
+        img: "/instaPost/Day 6.jpeg",
+    },
+     {
+        name: "Instagram Post",
+        img: "/instaPost/Day 7.jpeg",
+    },
+    {
+        name: "Instagram Post",
         img: "/instaPost/img11.jpeg",
     },
     {
