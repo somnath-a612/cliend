@@ -40,6 +40,30 @@ export const ProfileImages = [
 ]
 
 export const WeadingPhoto = [
+    {
+        name : "album Design",
+        img : "/album/AL1.jpeg",
+    },
+     {
+        name : "album Design",
+        img : "/album/AL2.jpeg",
+    },
+     {
+        name : "album Design",
+        img : "/album/AL3.jpeg",
+    },
+     {
+        name : "album Design",
+        img : "/album/AL4.jpeg",
+    },
+     {
+        name : "album Design",
+        img : "/album/AL5.jpeg",
+    },
+     {
+        name : "album Design",
+        img : "/album/AL6.jpeg",
+    },
    {
     name : "album Design",
     img : "/album/img1.jpeg",
@@ -53,26 +77,6 @@ export const WeadingPhoto = [
     name : "album Design",
     img : "/album/img4.jpeg",
    },
-//    {
-//     name : "album Design",
-//     img : img5,
-//    },
-//    {
-//     name : "album Design",
-//     img : img6,
-//    },
-//    {
-//     name : "album Design",
-//     img : img7,
-//    },
-//    {
-//     name : "album Design",
-//     img : img8,
-//    },
-//    {
-//     name : "album Design",
-//     img : img9,
-//    }
 ]
 
 export const InstaPosts = [
